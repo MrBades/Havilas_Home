@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Havilas Home</title>
+
+  <style>
+    html{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      margin: 0;
+      padding: 0;
+    }
+    .main{
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 400px;
+    }
+    .container{
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      position: relative;
+      width:  calc(100vw/3);
+      background: url("{% static '/images/p2.jpg' %}");
+      background-size: cover;
+      left: calc(100vw/3); 
+    }
+    .container h1{
+      position: absolute;
+      margin: 1em 0 0 27%;
+      color: #fff;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      text-decoration: underline;
+    }
+    .container .Interested{
+      background: #964e4e67;
+      position: absolute;
+      margin: 4.5em 2.5em 0 2.5em;
+      color: #fff;
+      font-size: 22px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .a1, .a2, .a3{
+      text-decoration: none;
+      position: absolute;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      background:#fff;
+      padding: 10px;
+      color: #080707;
+    } 
+    .a1{
+      align-self: flex-start;
+    }
+    .a2{
+      align-self: center;
+    }
+    .a3{
+      align-self:flex-end;
+    }
+    .linksContainer{
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      margin-top: 26em;
+      height: 150px;
+      width: 100%;
+    } 
+    .a1:hover{
+      align-self: flex-start;
+      margin-left: 2em;
+      border-radius: 0.25em;
+    }
+    .a2:hover{
+      align-self: center;
+      margin-left: 2em;
+      border-radius: 0.25em;
+    }
+    .a3:hover{
+      align-self:flex-end;
+      margin-left: 2em;
+      border-radius: 0.25em;
+    }
+    
+    @media only screen and (max-width: 900px) {
+      /* For mobile phones: */
+      .container{
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        position: relative;
+        width:  calc(100vw/2);
+        background: url("{% static '/images/p2.jpg' %}");
+        background-size: cover;
+        left: calc(100vw/4); 
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+    /* For mobile phones: */
+    .container{
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        position: relative;
+        width: 100%;
+        background: url("{% static '/images/p2.jpg' %}");
+        background-size: cover;
+        left: 0;
+    }
+  }
+  </style>
+</head>
+<body>
+
+  <div class="head"></div>
+  <div class="main" >
+    <div class="container">
+      
+      <h1><span>Havilas Home</span></h1>
+      <span class="Interested">Interested in booking our apartments? Check links below 👇🏾</span>
+      
+      <div class="linksContainer">
+
+        <a href="{% url 'one' %}" class="a1">Havilas Home 1 bedroom </a>
+        <a href="{% url 'two' %}" class="a2">Havilas Home 2 bedroom </a>
+        <a href="{% url 'three' %}" class="a3">Havilas Home 3 bedroom </a>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="footer"></div>
+  
+</body>
+<script>
+ 
+</script>
+</html>
